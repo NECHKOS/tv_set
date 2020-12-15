@@ -1,9 +1,11 @@
 #pragma once
+#include <string>
+const int channelQty = 10;
 class TVSet {
 private:
 	bool isOn;
 	unsigned int channelNum;
-	const int channelQty = 100;
+	std::string channelList[channelQty];
 
 public:
 	TVSet();
@@ -13,4 +15,5 @@ public:
 	void setChannelNum(unsigned int);
 	void increaseChannelNum();
 	void decreaseChannelNum();
+	void setChannelList(std::string fList[], int);
 };
